@@ -1,15 +1,21 @@
 import './App.css';
 import React from 'react';
 class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
   componentDidMount = async () =>{
     const res = await fetch('/user');
     const bodytext = await res.text();
-    console.log(bodytext);
+    this.setState({
+      textdb: bodytext
+    })
   }
   render(){
     return (
       <div className="App">
-        리액트화면
+        {this.state.textdb}
       </div>
     );
   }
