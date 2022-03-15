@@ -4,16 +4,18 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "myreact" : "cd layout && npm start",
+    "myreact": "cd layout && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
-    "dev":"concurrently --kill-others-on-fail \"npm run server\" \"npm run myreact\" "
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run myreact\" "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "concurrently": "^7.0.0",
     "express": "^4.17.3",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.15"
   }
 }
